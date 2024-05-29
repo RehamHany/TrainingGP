@@ -1,0 +1,565 @@
+{
+	"info": {
+		"_postman_id": "3aadbf1c-89bd-4d2c-958d-2e5bba442ea7",
+		"name": "TrainingGP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33163806"
+	},
+	"item": [
+		{
+			"name": "TODO_API",
+			"item": [
+				{
+					"name": "AddItem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZDdhbnlAZ21haWwuY29tIiwiZXhwIjoxNzE3MDI4MTU5LCJpYXQiOjE3MTcwMTczNTl9.WDiv7JWjAcZ6K18WuQAwZLbTcDofMHv1ScUWfKQwbp8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"reham\",\r\n    \"itemDetails\":{\r\n        \"description\":\"this is my item\",\r\n        \"createdAt\":\"2022-12-31\",\r\n        \"priorityItem\":\"LOW\",\r\n        \"status\":true\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/item/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"item",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteItem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8070/api/v1/item/delete?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"item",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindItem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8070/api/v1/item/findItem?id=52",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"item",
+								"findItem"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "52"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAllItem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8070/api/v1/item/findAllItem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"item",
+								"findAllItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8070/api/v1/item/search?title=re",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"item",
+								"search"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "re"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateItem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":52,\r\n    \"title\":\"habit1\",\r\n    \"itemDetails\":{\r\n        \"description\":\"this is my habit\",\r\n        \"createdAt\":\"2022-12-31\",\r\n        \"priorityItem\":\"LOW\",\r\n        \"status\":true\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/item/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"item",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User_Api",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ahmed7any@gmail.com\",\r\n    \"password\":\"123\",\r\n    \"confirmPass\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ahmed7any@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJleHAiOjE3MTYzODA1OTQsImlhdCI6MTcxNjM2OTc5NH0.YBigFFzBs27LjhQT6evZW52iGuajwRrEJNptq03eYac",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJleHAiOjE3MTcwMTA4NTIsImlhdCI6MTcxNzAwMDA1Mn0.Brgg-w4933WOQ3hnVd1RQoOAhGBfEdWXFnJ0SniNbJo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/findUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"findUser"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "52",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/findAllUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"findAllUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJleHAiOjE3MTYyMzI5NTUsImlhdCI6MTcxNjIyMjE1NX0.9NWFYoHyUYLxzkP2aXWEpMOHoJkS30NVbnwRoIzeHEM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ahmedhany@gmail.com\",\r\n    \"password\":\"456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerifyEmail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rehamhany01@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/checkEmail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"checkEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rehamhany01@gmail.com\",\r\n    \"code\":884817,\r\n    \"password\":\"456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/resetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "OTP",
+								"value": "860638",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/activate?email=rehamhany01@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"activate"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "rehamhany01@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "regenerateOTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/regenerateOTP?email=mohamed@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"regenerateOTP"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "mohamed@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkToken",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZEBnbWFpbC5jb20iLCJleHAiOjE3MTYyMzI5NTUsImlhdCI6MTcxNjIyMjE1NX0.9NWFYoHyUYLxzkP2aXWEpMOHoJkS30NVbnwRoIzeHEM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/checkToken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"checkToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getToken",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhaG1lZDdhbnlAZ21haWwuY29tIiwiZXhwIjoxNzE3MDI4MTU5LCJpYXQiOjE3MTcwMTczNTl9.WDiv7JWjAcZ6K18WuQAwZLbTcDofMHv1ScUWfKQwbp8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8075/api/v1/user/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
